@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>G Coin</title>
+</head>
+<body>
+    <h1 class="clicks">G Coins: <span id="clickCount">Loading...</span></h1>
+    <button id="clickButton" class="gcoin-button"><img class="gcoin-img" src="gcoin.png"></button>
+    <p class="you-clicks">Your G Coins: <span id="yourclickCount">Loading...</span></p>
+    <div class="divide"></div>
+    <form id="usernameForm">
+      <label for="name">Username: </label><input  id="name" type="text" maxlength="20">
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <div class="leaderboard">
+      <h2>Leaderboard</h2>
+      <ol class="place" id="leaderboard"></ol>
+      <p class="place" id="your-place"></p>
+    </div>
+    <div class="footer">
+      <p style="font-weight: 700;">Another amazing website made by: <a href="https://github.com/WONKanese" target="_blank">Wonkanese</a><br>Version 1.0
+      <br>Email any problems at: t.harrison.webster@gmail.com</p>
+    </div>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="leaderboard.js"></script>
+</body>
+</html>

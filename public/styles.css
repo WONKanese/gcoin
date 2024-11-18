@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: "Host Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Host Grotesk", sans-serif;
+  color: #2c3e50;
+}
+
+.gcoin-button {
+  display: block;
+  margin: 20px auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.gcoin-img {
+  width: 80px;
+  height: auto;
+  transition: filter 0.2s ease;
+}
+.gcoin-img:hover {
+    filter: brightness(92%);
+}
+.gcoin-img:active {
+    filter: brightness(112%);
+}
+.you-clicks {
+    text-align: center;
+    font-weight: 500;
+}
+#clickCount {
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+#yourclickCount {
+    font-weight: bold;
+    font-weight: 600;
+    color: #dbbf1e;
+}
+
+.divide {
+    margin: 5vh auto;
+    height: 3px;
+    width: 25vw;
+    background-color: black;
+}
+.clicks {
+    text-align: center;
+}
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+form input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+.leaderboard {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#leaderboard {
+  list-style-type: none;
+  padding: 0;
+}
+
+.place {
+  font-size: 18px;
+  color: #34495e;
+}
+.footer {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+  bottom: -0.5vh;
+  left: 1vw;
+  color: black;
+  text-align: left;
+}
