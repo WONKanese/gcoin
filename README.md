@@ -1,5 +1,5 @@
 
-# G Coin
+# G Coin - https://g-coin-x.web.app
 
 G Coin is a simple clicker website where users can:
 
