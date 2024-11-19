@@ -1,6 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js';
 import { getDatabase, ref, onValue, get, update, set, push, remove } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js';
-
+import { censorText } from './badword-handler.js';
         
 const firebaseConfig = {
   apiKey: "AIzaSyDtaJjUpoMFNjuGmkO_e0gaRx3-IwheiwU",
@@ -148,6 +148,11 @@ nameInput.value = pastUser;
 form.addEventListener('submit', function(event) {
   event.preventDefault();
   const nameValue = nameInput.value;
+  const censoredText = censorText(nameValue);
+  if (censoredText.includes("*")) {
+    alert("You cannot have an inappropriate username");
+    return;
+  }
   let pastUser = getCookie("username");
   if (nameValue == "" || pastUser == nameValue) {
     return;

@@ -1,6 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js';
 import { getDatabase, ref, onValue, get, update, set, push, remove } from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js';
-
+import { censorText } from './badword-handler.js';
         
 const firebaseConfig = {
     apiKey: "AIzaSyDtaJjUpoMFNjuGmkO_e0gaRx3-IwheiwU",
@@ -14,7 +14,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-
 const leaderboard = document.getElementById("leaderboard");
 
 function getCookie(cname) {
@@ -61,7 +60,9 @@ function updateLeaderboard() {
                 break;
             }
             const newItem = document.createElement("li");
-            newItem.textContent = `#${i} ${user.username} - ${user.clicks}`;
+            
+            const censoredText = censorText(user.username);
+            newItem.textContent = `#${i} ${censoredText} - ${user.clicks}`;
             leaderboard.appendChild(newItem);
         }
         let place = users.findIndex(user => user.username == getCookie("username"));
@@ -69,7 +70,6 @@ function updateLeaderboard() {
     })
 
 }
-
 updateLeaderboard();
 
 setInterval(() => {
